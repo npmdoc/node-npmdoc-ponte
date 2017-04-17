@@ -1,0 +1,1669 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/eclipse/ponte#readme">ponte (v0.0.16)</a>
+</h1>
+<h4>The Internet of Things Bridge for REST developers</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ponte">module ponte</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ponte.ponte">
+            function <span class="apidocSignatureSpan"></span>ponte
+            <span class="apidocSignatureSpan">(opts, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ponte.cli">
+            function <span class="apidocSignatureSpan">ponte.</span>cli
+            <span class="apidocSignatureSpan">(args, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ponte.coap">
+            function <span class="apidocSignatureSpan">ponte.</span>coap
+            <span class="apidocSignatureSpan">(opts, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ponte.http">
+            function <span class="apidocSignatureSpan">ponte.</span>http
+            <span class="apidocSignatureSpan">(opts, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ponte.persistence">
+            function <span class="apidocSignatureSpan">ponte.</span>persistence
+            <span class="apidocSignatureSpan">(opts, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ponte.super_">
+            function <span class="apidocSignatureSpan">ponte.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ponte.toString">
+            function <span class="apidocSignatureSpan">ponte.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ponte.</span>coap.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ponte.</span>http.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ponte.cli">module ponte.cli</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ponte.cli.cli">
+            function <span class="apidocSignatureSpan">ponte.</span>cli
+            <span class="apidocSignatureSpan">(args, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ponte.coap">module ponte.coap</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ponte.coap.coap">
+            function <span class="apidocSignatureSpan">ponte.</span>coap
+            <span class="apidocSignatureSpan">(opts, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ponte.coap.prototype">module ponte.coap.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ponte.coap.prototype._handleAuthError">
+            function <span class="apidocSignatureSpan">ponte.coap.prototype.</span>_handleAuthError
+            <span class="apidocSignatureSpan">(err, res)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ponte.coap.prototype._handleGET">
+            function <span class="apidocSignatureSpan">ponte.coap.prototype.</span>_handleGET
+            <span class="apidocSignatureSpan">(topic, req, res)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ponte.coap.prototype._handleNotAuthenticated">
+            function <span class="apidocSignatureSpan">ponte.coap.prototype.</span>_handleNotAuthenticated
+            <span class="apidocSignatureSpan">(res)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ponte.coap.prototype._handleNotAuthorized">
+            function <span class="apidocSignatureSpan">ponte.coap.prototype.</span>_handleNotAuthorized
+            <span class="apidocSignatureSpan">(res)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ponte.coap.prototype._handlePUT">
+            function <span class="apidocSignatureSpan">ponte.coap.prototype.</span>_handlePUT
+            <span class="apidocSignatureSpan">(topic, payload, res)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ponte.coap.prototype.authenticate">
+            function <span class="apidocSignatureSpan">ponte.coap.prototype.</span>authenticate
+            <span class="apidocSignatureSpan">(req, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ponte.coap.prototype.authorizeGet">
+            function <span class="apidocSignatureSpan">ponte.coap.prototype.</span>authorizeGet
+            <span class="apidocSignatureSpan">(subject, topic, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ponte.coap.prototype.authorizePut">
+            function <span class="apidocSignatureSpan">ponte.coap.prototype.</span>authorizePut
+            <span class="apidocSignatureSpan">(subject, topic, payload, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ponte.coap.prototype.close">
+            function <span class="apidocSignatureSpan">ponte.coap.prototype.</span>close
+            <span class="apidocSignatureSpan">(done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ponte.http">module ponte.http</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ponte.http.http">
+            function <span class="apidocSignatureSpan">ponte.</span>http
+            <span class="apidocSignatureSpan">(opts, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ponte.http.prototype">module ponte.http.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ponte.http.prototype.authenticate">
+            function <span class="apidocSignatureSpan">ponte.http.prototype.</span>authenticate
+            <span class="apidocSignatureSpan">(req, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ponte.http.prototype.authorizeGet">
+            function <span class="apidocSignatureSpan">ponte.http.prototype.</span>authorizeGet
+            <span class="apidocSignatureSpan">(subject, topic, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ponte.http.prototype.authorizePut">
+            function <span class="apidocSignatureSpan">ponte.http.prototype.</span>authorizePut
+            <span class="apidocSignatureSpan">(subject, topic, payload, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ponte.http.prototype.buildServer">
+            function <span class="apidocSignatureSpan">ponte.http.prototype.</span>buildServer
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ponte.http.prototype.close">
+            function <span class="apidocSignatureSpan">ponte.http.prototype.</span>close
+            <span class="apidocSignatureSpan">(done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ponte.persistence">module ponte.persistence</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ponte.persistence.persistence">
+            function <span class="apidocSignatureSpan">ponte.</span>persistence
+            <span class="apidocSignatureSpan">(opts, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ponte.toString">module ponte.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ponte.toString.toString">
+            function <span class="apidocSignatureSpan">ponte.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ponte" id="apidoc.module.ponte">module ponte</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ponte.ponte" id="apidoc.element.ponte.ponte">
+        function <span class="apidocSignatureSpan"></span>ponte
+        <span class="apidocSignatureSpan">(opts, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Ponte(opts, done) {
+  if (!(this instanceof Ponte)) {
+    return new Ponte(opts, done);
+  }
+
+  if (typeof opts === "function") {
+    done = opts;
+    opts = {};
+  }
+
+  this.options = opts;
+
+  var that = this;
+
+  async.eachSeries(servers, function(obj, cb) {
+    opts[obj.service] = xtend(obj.defaults, opts[obj.service]);
+    opts[obj.service].ponte = that;
+    obj.factory(opts[obj.service], function(err, instance) {
+      that[obj.service] = instance;
+      cb(err);
+    });
+  }, function(err) {
+    if (done) {
+      done(err, that);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ponte.cli" id="apidoc.element.ponte.cli">
+        function <span class="apidocSignatureSpan">ponte.</span>cli
+        <span class="apidocSignatureSpan">(args, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cli = function (args, done) {
+
+  args = args || [];
+
+  var program = new commander.Command();
+  var server = null;
+  var runned = false;
+
+  program
+    .version(pkg.version)
+    .option("-m, --mqtt-port &lt;n&gt;", "the mqtt port to listen to", parseInt)
+    .option("-p, --http-port &lt;n&gt;", "the http port to listen to", parseInt)
+    .option("-a, --coap-port &lt;n&gt;", "the coap port to listen to", parseInt)
+    .option("--host &lt;host&gt;", "the host to listen to")
+    .option("--coap-host &lt;host&gt;", "the host to listen to for coap requests")
+    .option("--mqtt-host &lt;host&gt;", "the host to listen to for mqtt requests")
+    .option("--http-host &lt;host&gt;", "the host to listen to for http requests")
+    .option("-d, --db &lt;path&gt;", "the path were to store the database")
+    .option("-c, --config &lt;c&gt;", "the config file to use (override every other option)")
+    .option("-v, --verbose", "set the bunyan log to INFO")
+    .option("--very-verbose", "set the bunyan log to DEBUG");
+
+  program.parse(args);
+
+  var opts = {
+    logger: {},
+    http: {},
+    mqtt: {},
+    coap: {},
+    persistence: {}
+  };
+
+  if (program.verbose) {
+    opts.logger.level = 30;
+  } else if (program.veryVerbose) {
+    opts.logger.level = 20;
+  }
+
+  if (program.httpPort) {
+    opts.http.port = program.httpPort;
+  }
+
+  if (program.mqttPort) {
+    opts.mqtt.port = program.mqttPort;
+  }
+
+  if (program.coapPort) {
+    opts.coap.port = program.coapPort;
+  }
+
+  if (program.host) {
+    opts.coap.host = program.host;
+    opts.mqtt.host = program.host;
+    opts.http.host = program.host;
+  }
+
+  if (program.coapHost) {
+    opts.coap.host = program.coapHost;
+  }
+
+  if (program.mqttHost) {
+    opts.mqtt.host = program.mqttHost;
+  }
+
+  if (program.httpHost) {
+    opts.http.host = program.httpHost;
+  }
+
+  if (program.db) {
+    opts.persistence.path = program.db;
+    opts.persistence.type = "level";
+  }
+
+  if (program.config) {
+    opts = require(path.resolve(program.config));
+  }
+
+  return this(opts, done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ponte.coap" id="apidoc.element.ponte.coap">
+        function <span class="apidocSignatureSpan">ponte.</span>coap
+        <span class="apidocSignatureSpan">(opts, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CoAP(opts, done) {
+  if (!(this instanceof CoAP)) {
+    return new CoAP(opts, done);
+  }
+
+  if (typeof opts === "function") {
+    done = opts;
+    opts = {};
+  }
+
+  var that = this;
+
+  this._persistence = opts.ponte.persistence;
+  this._broker = opts.ponte.broker;
+  this._ponte = opts.ponte;
+
+  if (typeof opts.authenticate === "function") {
+    this.authenticate = opts.authenticate;
+  }
+
+  if (typeof opts.authorizeGet === "function") {
+    this.authorizeGet = opts.authorizeGet;
+  }
+
+  if (typeof opts.authorizePut === "function") {
+    this.authorizePut = opts.authorizePut;
+  }
+
+  var logger = this._logger = opts.ponte.logger.child({ service: 'CoAP' });
+
+  this.server = coap.createServer(function handler(req, res) {
+    var match = req.url.match(rRegexp);
+    var topic;
+
+    req.on('error', function(err) {
+      logger.info(err);
+    });
+
+    res.on('error', function(err) {
+      logger.info(err);
+    });
+
+    logger.info({ url: req.url, code: req.code, sender: req.rsinfo, headers: req.headers }, 'request received');
+
+    if (match) {
+      topic = match[1];
+      that.authenticate(req, function(err, authenticated, subject) {
+        if (err) {
+          that._handleAuthError(err, res);
+          return;
+        }
+
+        if (!authenticated) {
+          that._handleNotAuthenticated(res);
+          return;
+        }
+
+        if (req.method === 'GET') {
+          that.authorizeGet(subject, topic, function(err, authorized) {
+            if (err) {
+              that._handleAuthError(err, res);
+              return;
+            }
+
+            if (!authorized) {
+              that._handleNotAuthorized(res);
+              return;
+            }
+
+            that._handleGET(topic, req, res);
+          });
+        } else if (req.method === 'PUT') {
+          req.pipe(callback(function(err, payload) {
+            payload = Buffer.concat(payload);
+
+            that.authorizePut(subject, topic, payload, function(err, authorized) {
+              if (err) {
+                that._handleAuthError(err, res);
+                return;
+              }
+
+              if (!authorized) {
+                that._handleNotAuthorized(res);
+                return;
+              }
+
+              that._handlePUT(topic, payload, res);
+            });
+
+          }));
+        }
+      });
+    } else {
+      res.statusCode = '4.04';
+      res.end();
+    }
+  });
+
+  this.server.listen(opts.port, opts.host, function(err) {
+    done(err, that);
+    logger.info({ port: opts.port }, "server started");
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ponte.http" id="apidoc.element.ponte.http">
+        function <span class="apidocSignatureSpan">ponte.</span>http
+        <span class="apidocSignatureSpan">(opts, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HTTP(opts, done) {
+  if (!(this instanceof HTTP)) {
+    return new HTTP(opts, done);
+  }
+
+  if (typeof opts === "function") {
+    done = opts;
+    opts = {};
+  }
+
+  var that = this;
+  this._persistence = opts.ponte.persistence;
+  this._ponte = opts.ponte;
+
+  if (typeof opts.authenticate === "function") {
+    this.authenticate = opts.authenticate;
+  }
+
+  if (typeof opts.authorizeGet === "function") {
+    this.authorizeGet = opts.authorizeGet;
+  }
+
+  if (typeof opts.authorizePut === "function") {
+    this.authorizePut = opts.authorizePut;
+  }
+
+  var logger = this._logger = opts.ponte.logger.child({
+    service: 'HTTP',
+    serializers: {
+      req: bunyan.stdSerializers.req,
+      res: bunyan.stdSerializers.res
+    }
+  });
+  this.server = http.createServer(this.buildServer(opts));
+  this.server.listen(opts.port, opts.host, function(err) {
+    done(err, that);
+    logger.info({ port: opts.port }, "server started");
+  });
+
+  if (this._ponte.mqtt) {
+    this._ponte.mqtt.attachHttpServer(this.server);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ponte.persistence" id="apidoc.element.ponte.persistence">
+        function <span class="apidocSignatureSpan">ponte.</span>persistence
+        <span class="apidocSignatureSpan">(opts, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">persistence = function (opts, done) {
+  var factory = persistences[opts.type];
+
+  if (opts.type === "memory") {
+    done(null, factory(opts));
+  } else {
+    factory(opts, done);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ponte.super_" id="apidoc.element.ponte.super_">
+        function <span class="apidocSignatureSpan">ponte.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ponte.toString" id="apidoc.element.ponte.toString">
+        function <span class="apidocSignatureSpan">ponte.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ponte.cli" id="apidoc.module.ponte.cli">module ponte.cli</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ponte.cli.cli" id="apidoc.element.ponte.cli.cli">
+        function <span class="apidocSignatureSpan">ponte.</span>cli
+        <span class="apidocSignatureSpan">(args, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cli = function (args, done) {
+
+  args = args || [];
+
+  var program = new commander.Command();
+  var server = null;
+  var runned = false;
+
+  program
+    .version(pkg.version)
+    .option("-m, --mqtt-port &lt;n&gt;", "the mqtt port to listen to", parseInt)
+    .option("-p, --http-port &lt;n&gt;", "the http port to listen to", parseInt)
+    .option("-a, --coap-port &lt;n&gt;", "the coap port to listen to", parseInt)
+    .option("--host &lt;host&gt;", "the host to listen to")
+    .option("--coap-host &lt;host&gt;", "the host to listen to for coap requests")
+    .option("--mqtt-host &lt;host&gt;", "the host to listen to for mqtt requests")
+    .option("--http-host &lt;host&gt;", "the host to listen to for http requests")
+    .option("-d, --db &lt;path&gt;", "the path were to store the database")
+    .option("-c, --config &lt;c&gt;", "the config file to use (override every other option)")
+    .option("-v, --verbose", "set the bunyan log to INFO")
+    .option("--very-verbose", "set the bunyan log to DEBUG");
+
+  program.parse(args);
+
+  var opts = {
+    logger: {},
+    http: {},
+    mqtt: {},
+    coap: {},
+    persistence: {}
+  };
+
+  if (program.verbose) {
+    opts.logger.level = 30;
+  } else if (program.veryVerbose) {
+    opts.logger.level = 20;
+  }
+
+  if (program.httpPort) {
+    opts.http.port = program.httpPort;
+  }
+
+  if (program.mqttPort) {
+    opts.mqtt.port = program.mqttPort;
+  }
+
+  if (program.coapPort) {
+    opts.coap.port = program.coapPort;
+  }
+
+  if (program.host) {
+    opts.coap.host = program.host;
+    opts.mqtt.host = program.host;
+    opts.http.host = program.host;
+  }
+
+  if (program.coapHost) {
+    opts.coap.host = program.coapHost;
+  }
+
+  if (program.mqttHost) {
+    opts.mqtt.host = program.mqttHost;
+  }
+
+  if (program.httpHost) {
+    opts.http.host = program.httpHost;
+  }
+
+  if (program.db) {
+    opts.persistence.path = program.db;
+    opts.persistence.type = "level";
+  }
+
+  if (program.config) {
+    opts = require(path.resolve(program.config));
+  }
+
+  return this(opts, done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ponte.coap" id="apidoc.module.ponte.coap">module ponte.coap</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ponte.coap.coap" id="apidoc.element.ponte.coap.coap">
+        function <span class="apidocSignatureSpan">ponte.</span>coap
+        <span class="apidocSignatureSpan">(opts, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CoAP(opts, done) {
+  if (!(this instanceof CoAP)) {
+    return new CoAP(opts, done);
+  }
+
+  if (typeof opts === "function") {
+    done = opts;
+    opts = {};
+  }
+
+  var that = this;
+
+  this._persistence = opts.ponte.persistence;
+  this._broker = opts.ponte.broker;
+  this._ponte = opts.ponte;
+
+  if (typeof opts.authenticate === "function") {
+    this.authenticate = opts.authenticate;
+  }
+
+  if (typeof opts.authorizeGet === "function") {
+    this.authorizeGet = opts.authorizeGet;
+  }
+
+  if (typeof opts.authorizePut === "function") {
+    this.authorizePut = opts.authorizePut;
+  }
+
+  var logger = this._logger = opts.ponte.logger.child({ service: 'CoAP' });
+
+  this.server = coap.createServer(function handler(req, res) {
+    var match = req.url.match(rRegexp);
+    var topic;
+
+    req.on('error', function(err) {
+      logger.info(err);
+    });
+
+    res.on('error', function(err) {
+      logger.info(err);
+    });
+
+    logger.info({ url: req.url, code: req.code, sender: req.rsinfo, headers: req.headers }, 'request received');
+
+    if (match) {
+      topic = match[1];
+      that.authenticate(req, function(err, authenticated, subject) {
+        if (err) {
+          that._handleAuthError(err, res);
+          return;
+        }
+
+        if (!authenticated) {
+          that._handleNotAuthenticated(res);
+          return;
+        }
+
+        if (req.method === 'GET') {
+          that.authorizeGet(subject, topic, function(err, authorized) {
+            if (err) {
+              that._handleAuthError(err, res);
+              return;
+            }
+
+            if (!authorized) {
+              that._handleNotAuthorized(res);
+              return;
+            }
+
+            that._handleGET(topic, req, res);
+          });
+        } else if (req.method === 'PUT') {
+          req.pipe(callback(function(err, payload) {
+            payload = Buffer.concat(payload);
+
+            that.authorizePut(subject, topic, payload, function(err, authorized) {
+              if (err) {
+                that._handleAuthError(err, res);
+                return;
+              }
+
+              if (!authorized) {
+                that._handleNotAuthorized(res);
+                return;
+              }
+
+              that._handlePUT(topic, payload, res);
+            });
+
+          }));
+        }
+      });
+    } else {
+      res.statusCode = '4.04';
+      res.end();
+    }
+  });
+
+  this.server.listen(opts.port, opts.host, function(err) {
+    done(err, that);
+    logger.info({ port: opts.port }, "server started");
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ponte.coap.prototype" id="apidoc.module.ponte.coap.prototype">module ponte.coap.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ponte.coap.prototype._handleAuthError" id="apidoc.element.ponte.coap.prototype._handleAuthError">
+        function <span class="apidocSignatureSpan">ponte.coap.prototype.</span>_handleAuthError
+        <span class="apidocSignatureSpan">(err, res)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_handleAuthError = function (err, res) {
+  this._logger.info(err);
+  res.statusCode = '5.00';
+  res.end();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+logger.info({ url: req.url, code: req.code, sender: req.rsinfo, headers: req.headers }, 'request received');
+
+if (match) {
+  topic = match[1];
+  that.authenticate(req, function(err, authenticated, subject) {
+    if (err) {
+      that.<span class="apidocCodeKeywordSpan">_handleAuthError</span>(err, res);
+      return;
+    }
+
+    if (!authenticated) {
+      that._handleNotAuthenticated(res);
+      return;
+    }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ponte.coap.prototype._handleGET" id="apidoc.element.ponte.coap.prototype._handleGET">
+        function <span class="apidocSignatureSpan">ponte.coap.prototype.</span>_handleGET
+        <span class="apidocSignatureSpan">(topic, req, res)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_handleGET = function (topic, req, res) {
+  var that = this;
+  var deliver = 'end';
+  var logger = this._logger;
+  var cb = function(topic, payload) {
+    logger.debug({ url: req.url, code: req.code, sender: req.rsinfo }, 'sending update');
+    res.write(payload);
+  };
+
+  that._persistence.lookupRetained(topic, function(err, packets) {
+    if (packets.length === 0) {
+      logger.info({ url: req.url, code: req.code, sender: req.rsinfo }, 'not found');
+      res.statusCode = '4.04';
+      return res.end();
+    }
+
+    if (req.headers.Observe === 0) {
+      logger.debug({ url: req.url, code: req.code, sender: req.rsinfo }, 'registering for topic');
+
+      deliver = 'write';
+      that._broker.subscribe(topic, cb);
+
+      req.on('error', function() {
+        that._broker.unsubscribe(topic, cb);
+      });
+
+      res.on('finish', function() {
+        that._broker.unsubscribe(topic, cb);
+      });
+    }
+
+    logger.debug({ url: req.url, code: req.code, sender: req.rsinfo }, 'delivering retained');
+
+    res[deliver](packets[0].payload);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+
+    if (!authorized) {
+      that._handleNotAuthorized(res);
+      return;
+    }
+
+    that.<span class="apidocCodeKeywordSpan">_handleGET</span>(topic, req, res);
+  });
+} else if (req.method === 'PUT') {
+  req.pipe(callback(function(err, payload) {
+    payload = Buffer.concat(payload);
+
+    that.authorizePut(subject, topic, payload, function(err, authorized) {
+      if (err) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ponte.coap.prototype._handleNotAuthenticated" id="apidoc.element.ponte.coap.prototype._handleNotAuthenticated">
+        function <span class="apidocSignatureSpan">ponte.coap.prototype.</span>_handleNotAuthenticated
+        <span class="apidocSignatureSpan">(res)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_handleNotAuthenticated = function (res) {
+  this._logger.info('authentication denied');
+  res.statusCode = '4.01';
+  res.end();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      that.authenticate(req, function(err, authenticated, subject) {
+if (err) {
+  that._handleAuthError(err, res);
+  return;
+}
+
+if (!authenticated) {
+  that.<span class="apidocCodeKeywordSpan">_handleNotAuthenticated</span>(res);
+  return;
+}
+
+if (req.method === 'GET') {
+  that.authorizeGet(subject, topic, function(err, authorized) {
+    if (err) {
+      that._handleAuthError(err, res);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ponte.coap.prototype._handleNotAuthorized" id="apidoc.element.ponte.coap.prototype._handleNotAuthorized">
+        function <span class="apidocSignatureSpan">ponte.coap.prototype.</span>_handleNotAuthorized
+        <span class="apidocSignatureSpan">(res)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_handleNotAuthorized = function (res) {
+  this._logger.info('not authorized');
+  res.statusCode = '4.03';
+  res.end();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  that.authorizeGet(subject, topic, function(err, authorized) {
+    if (err) {
+      that._handleAuthError(err, res);
+      return;
+    }
+
+    if (!authorized) {
+      that.<span class="apidocCodeKeywordSpan">_handleNotAuthorized</span>(res);
+      return;
+    }
+
+    that._handleGET(topic, req, res);
+  });
+} else if (req.method === 'PUT') {
+  req.pipe(callback(function(err, payload) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ponte.coap.prototype._handlePUT" id="apidoc.element.ponte.coap.prototype._handlePUT">
+        function <span class="apidocSignatureSpan">ponte.coap.prototype.</span>_handlePUT
+        <span class="apidocSignatureSpan">(topic, payload, res)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_handlePUT = function (topic, payload, res) {
+  var that = this;
+
+  var packet = { topic: topic, payload: payload, retain: true };
+
+  that._persistence.storeRetained(packet, function() {
+    that._broker.publish(topic, payload, {}, function() {
+      res.setOption('Location-Path', '/r/' + topic);
+      res.statusCode = '2.04';
+      res.end();
+
+      that._ponte.emit('updated', topic, payload);
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+          }
+
+          if (!authorized) {
+            that._handleNotAuthorized(res);
+            return;
+          }
+
+          that.<span class="apidocCodeKeywordSpan">_handlePUT</span>(topic, payload, res);
+        });
+
+      }));
+    }
+  });
+} else {
+  res.statusCode = '4.04';
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ponte.coap.prototype.authenticate" id="apidoc.element.ponte.coap.prototype.authenticate">
+        function <span class="apidocSignatureSpan">ponte.coap.prototype.</span>authenticate
+        <span class="apidocSignatureSpan">(req, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">authenticate = function (req, cb) {
+  cb(null, true, {});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  logger.info(err);
+});
+
+logger.info({ url: req.url, code: req.code, sender: req.rsinfo, headers: req.headers }, 'request received');
+
+if (match) {
+  topic = match[1];
+  that.<span class="apidocCodeKeywordSpan">authenticate</span>(req, function(err, authenticated, subject) {
+    if (err) {
+      that._handleAuthError(err, res);
+      return;
+    }
+
+    if (!authenticated) {
+      that._handleNotAuthenticated(res);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ponte.coap.prototype.authorizeGet" id="apidoc.element.ponte.coap.prototype.authorizeGet">
+        function <span class="apidocSignatureSpan">ponte.coap.prototype.</span>authorizeGet
+        <span class="apidocSignatureSpan">(subject, topic, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">authorizeGet = function (subject, topic, cb) {
+  cb(null, true);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+if (!authenticated) {
+  that._handleNotAuthenticated(res);
+  return;
+}
+
+if (req.method === 'GET') {
+  that.<span class="apidocCodeKeywordSpan">authorizeGet</span>(subject, topic, function(err, authorized) {
+    if (err) {
+      that._handleAuthError(err, res);
+      return;
+    }
+
+    if (!authorized) {
+      that._handleNotAuthorized(res);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ponte.coap.prototype.authorizePut" id="apidoc.element.ponte.coap.prototype.authorizePut">
+        function <span class="apidocSignatureSpan">ponte.coap.prototype.</span>authorizePut
+        <span class="apidocSignatureSpan">(subject, topic, payload, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">authorizePut = function (subject, topic, payload, cb) {
+  cb(null, true);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    that._handleGET(topic, req, res);
+  });
+} else if (req.method === 'PUT') {
+  req.pipe(callback(function(err, payload) {
+    payload = Buffer.concat(payload);
+
+    that.<span class="apidocCodeKeywordSpan">authorizePut</span>(subject, topic, payload, function(err, authorized) {
+      if (err) {
+        that._handleAuthError(err, res);
+        return;
+      }
+
+      if (!authorized) {
+        that._handleNotAuthorized(res);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ponte.coap.prototype.close" id="apidoc.element.ponte.coap.prototype.close">
+        function <span class="apidocSignatureSpan">ponte.coap.prototype.</span>close
+        <span class="apidocSignatureSpan">(done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">close = function (done) {
+  this.server.close(done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+server.on("updated", function(resource, buffer) {
+  console.log("Resource Updated", resource, buffer);
+});
+
+// Stop the server after 1 minute
+setTimeout(function() {
+  server.<span class="apidocCodeKeywordSpan">close</span>(function() {
+    console.log("server stopped");
+  });
+}, 60 * 1000);
+```
+
+## Configuration
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ponte.http" id="apidoc.module.ponte.http">module ponte.http</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ponte.http.http" id="apidoc.element.ponte.http.http">
+        function <span class="apidocSignatureSpan">ponte.</span>http
+        <span class="apidocSignatureSpan">(opts, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HTTP(opts, done) {
+  if (!(this instanceof HTTP)) {
+    return new HTTP(opts, done);
+  }
+
+  if (typeof opts === "function") {
+    done = opts;
+    opts = {};
+  }
+
+  var that = this;
+  this._persistence = opts.ponte.persistence;
+  this._ponte = opts.ponte;
+
+  if (typeof opts.authenticate === "function") {
+    this.authenticate = opts.authenticate;
+  }
+
+  if (typeof opts.authorizeGet === "function") {
+    this.authorizeGet = opts.authorizeGet;
+  }
+
+  if (typeof opts.authorizePut === "function") {
+    this.authorizePut = opts.authorizePut;
+  }
+
+  var logger = this._logger = opts.ponte.logger.child({
+    service: 'HTTP',
+    serializers: {
+      req: bunyan.stdSerializers.req,
+      res: bunyan.stdSerializers.res
+    }
+  });
+  this.server = http.createServer(this.buildServer(opts));
+  this.server.listen(opts.port, opts.host, function(err) {
+    done(err, that);
+    logger.info({ port: opts.port }, "server started");
+  });
+
+  if (this._ponte.mqtt) {
+    this._ponte.mqtt.attachHttpServer(this.server);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ponte.http.prototype" id="apidoc.module.ponte.http.prototype">module ponte.http.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ponte.http.prototype.authenticate" id="apidoc.element.ponte.http.prototype.authenticate">
+        function <span class="apidocSignatureSpan">ponte.http.prototype.</span>authenticate
+        <span class="apidocSignatureSpan">(req, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">authenticate = function (req, cb) {
+  cb(null, true, {});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  logger.info(err);
+});
+
+logger.info({ url: req.url, code: req.code, sender: req.rsinfo, headers: req.headers }, 'request received');
+
+if (match) {
+  topic = match[1];
+  that.<span class="apidocCodeKeywordSpan">authenticate</span>(req, function(err, authenticated, subject) {
+    if (err) {
+      that._handleAuthError(err, res);
+      return;
+    }
+
+    if (!authenticated) {
+      that._handleNotAuthenticated(res);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ponte.http.prototype.authorizeGet" id="apidoc.element.ponte.http.prototype.authorizeGet">
+        function <span class="apidocSignatureSpan">ponte.http.prototype.</span>authorizeGet
+        <span class="apidocSignatureSpan">(subject, topic, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">authorizeGet = function (subject, topic, cb) {
+  cb(null, true);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+if (!authenticated) {
+  that._handleNotAuthenticated(res);
+  return;
+}
+
+if (req.method === 'GET') {
+  that.<span class="apidocCodeKeywordSpan">authorizeGet</span>(subject, topic, function(err, authorized) {
+    if (err) {
+      that._handleAuthError(err, res);
+      return;
+    }
+
+    if (!authorized) {
+      that._handleNotAuthorized(res);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ponte.http.prototype.authorizePut" id="apidoc.element.ponte.http.prototype.authorizePut">
+        function <span class="apidocSignatureSpan">ponte.http.prototype.</span>authorizePut
+        <span class="apidocSignatureSpan">(subject, topic, payload, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">authorizePut = function (subject, topic, payload, cb) {
+  cb(null, true);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    that._handleGET(topic, req, res);
+  });
+} else if (req.method === 'PUT') {
+  req.pipe(callback(function(err, payload) {
+    payload = Buffer.concat(payload);
+
+    that.<span class="apidocCodeKeywordSpan">authorizePut</span>(subject, topic, payload, function(err, authorized) {
+      if (err) {
+        that._handleAuthError(err, res);
+        return;
+      }
+
+      if (!authorized) {
+        that._handleNotAuthorized(res);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ponte.http.prototype.buildServer" id="apidoc.element.ponte.http.prototype.buildServer">
+        function <span class="apidocSignatureSpan">ponte.http.prototype.</span>buildServer
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">buildServer = function (opts) {
+  var logger = this._logger;
+  var persistence = this._persistence;
+  var ponte = this._ponte;
+
+  var authenticate = this.authenticate;
+  var authorizeGet = this.authorizeGet;
+  var authorizePut = this.authorizePut;
+
+  function handleAuthError(err, res) {
+    logger.info(err);
+    res.statusCode = 500;
+    res.end();
+  }
+
+  function handleNotAuthenticated(res) {
+    logger.info('authentication denied');
+    res.statusCode = 401;
+    res.end();
+  }
+
+  function handleNotAuthorized(res) {
+    logger.info('not authorized');
+    res.statusCode = 403;
+    res.end();
+  }
+
+  var handlePontePublic = st(opts.publicDirs.ponte, {
+    index: false,
+    passthrough: true,
+    dot: opts.publicDirs.mosca.match(/(^|\/)\./)
+  });
+
+  var handleMoscaPublic = st(opts.publicDirs.mosca, {
+    index: false,
+    passthrough: false,
+    dot: opts.publicDirs.mosca.match(/(^|\/)\./)
+  });
+
+  function handleGetResource(subject, topic, req, res) {
+    if (req.method !== 'GET') {
+      return false;
+    }
+
+    authorizeGet(subject, topic, function(err, authorized) {
+      if (err) {
+        handleAuthError(err, res);
+        return;
+      }
+
+      if (!authorized) {
+        handleNotAuthorized(res);
+        return;
+      }
+
+      persistence.lookupRetained(topic, function(err, packets) {
+        if (packets.length === 0) {
+          res.statusCode = 404;
+          res.end('Not found');
+        } else {
+          res.end(packets[0].payload);
+        }
+      });
+
+    });
+
+    return true;
+  }
+
+  function handlePutResource(subject, topic, req, res) {
+    if (req.method !== 'PUT' &amp;&amp; req.method !== 'POST') {
+      return false;
+    }
+
+    req.pipe(callback(function(err, payload) {
+      payload = payload[0];
+
+      if (typeof payload === "undefined") {
+        payload = "";
+      }
+
+      authorizePut(subject, topic, payload, function(err, authorized) {
+        if (err) {
+          handleAuthError(err, res);
+          return;
+        }
+
+        if (!authorized) {
+          handleNotAuthorized(res);
+          return;
+        }
+
+        var packet = { topic: topic, payload: payload, retain: true };
+        persistence.storeRetained(packet, function() {
+          ponte.broker.publish(topic, payload, {}, function() {
+            res.setHeader('Location', '/resources/' + topic);
+            res.statusCode = 204;
+            res.end();
+            ponte.emit('updated', topic, new Buffer(payload));
+          });
+        });
+
+      });
+    }));
+
+    return true;
+  }
+
+  function handleNotFound(res) {
+    res.writeHeader(404);
+    res.end("Not Found");
+  }
+
+  return corsify({
+    endOptions: true
+  }, function httpServer(req, res) {
+    logger.info({ req: req });
+
+    res.on('finish', function() {
+      logger.info({ res: res });
+    });
+
+    // Only authenticate requests to the resources
+    var match = req.url.match(resourcesRegexp);
+    if (match) {
+      var topic = match[1];
+
+      authenticate(req, function(err, authenticated, subject) {
+        if (err) {
+          handleAuthError(err, res);
+          return;
+        }
+
+        if (!authenticated) {
+          handleNotAuthenticated(res);
+          return;
+        }
+
+        var handled =
+          handleGetResource(subject, topic, req, res) ||
+          handlePutResource(subject, topic, req, res);
+
+        if (!handled) {
+          handleNotFound(res);
+        }
+      });
+    } else {
+      // Public libraries do not require authentication
+      if (opts.serveLibraries) {
+        handlePontePublic(req, res, function() {
+          handleMoscaPublic(req, res);
+        });
+      } else {
+        handleNotFound(res);
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var logger = this._logger = opts.ponte.logger.child({
+  service: 'HTTP',
+  serializers: {
+    req: bunyan.stdSerializers.req,
+    res: bunyan.stdSerializers.res
+  }
+});
+this.server = http.createServer(this.<span class="apidocCodeKeywordSpan">buildServer</span>(opts));
+this.server.listen(opts.port, opts.host, function(err) {
+  done(err, that);
+  logger.info({ port: opts.port }, "server started");
+});
+
+if (this._ponte.mqtt) {
+  this._ponte.mqtt.attachHttpServer(this.server);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ponte.http.prototype.close" id="apidoc.element.ponte.http.prototype.close">
+        function <span class="apidocSignatureSpan">ponte.http.prototype.</span>close
+        <span class="apidocSignatureSpan">(done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">close = function (done) {
+  this.server.close(done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+server.on("updated", function(resource, buffer) {
+  console.log("Resource Updated", resource, buffer);
+});
+
+// Stop the server after 1 minute
+setTimeout(function() {
+  server.<span class="apidocCodeKeywordSpan">close</span>(function() {
+    console.log("server stopped");
+  });
+}, 60 * 1000);
+```
+
+## Configuration
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ponte.persistence" id="apidoc.module.ponte.persistence">module ponte.persistence</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ponte.persistence.persistence" id="apidoc.element.ponte.persistence.persistence">
+        function <span class="apidocSignatureSpan">ponte.</span>persistence
+        <span class="apidocSignatureSpan">(opts, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">persistence = function (opts, done) {
+  var factory = persistences[opts.type];
+
+  if (opts.type === "memory") {
+    done(null, factory(opts));
+  } else {
+    factory(opts, done);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ponte.toString" id="apidoc.module.ponte.toString">module ponte.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ponte.toString.toString" id="apidoc.element.ponte.toString.toString">
+        function <span class="apidocSignatureSpan">ponte.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
