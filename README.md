@@ -1,4 +1,7 @@
-# api documentation for  [ponte (v0.0.16)](https://github.com/eclipse/ponte#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-ponte.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-ponte) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-ponte.svg)](https://travis-ci.org/npmdoc/node-npmdoc-ponte)
+# npmdoc-ponte
+
+#### basic api documentation for  [ponte (v0.0.16)](https://github.com/eclipse/ponte#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-ponte.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-ponte) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-ponte.svg)](https://travis-ci.org/npmdoc/node-npmdoc-ponte)
+
 #### The Internet of Things Bridge for REST developers
 
 [![NPM](https://nodei.co/npm/ponte.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/ponte)
