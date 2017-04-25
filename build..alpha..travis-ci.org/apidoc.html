@@ -99,26 +99,8 @@
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.ponte.persistence">
-            function <span class="apidocSignatureSpan">ponte.</span>persistence
-            <span class="apidocSignatureSpan">(opts, done)</span>
-            </a>
-
-        </li>
-
-        <li>
-
             <a class="apidocElementLiA" href="#apidoc.element.ponte.super_">
             function <span class="apidocSignatureSpan">ponte.</span>super_
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.ponte.toString">
-            function <span class="apidocSignatureSpan">ponte.</span>toString
             <span class="apidocSignatureSpan">()</span>
             </a>
 
@@ -133,19 +115,6 @@
         <li>
 
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ponte.</span>http.prototype</span>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.ponte.cli">module ponte.cli</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.ponte.cli.cli">
-            function <span class="apidocSignatureSpan">ponte.</span>cli
-            <span class="apidocSignatureSpan">(args, done)</span>
-            </a>
 
         </li>
 
@@ -311,32 +280,6 @@
 
     </ol></li>
 
-    <li class="apidocModuleLi"><a href="#apidoc.module.ponte.persistence">module ponte.persistence</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.ponte.persistence.persistence">
-            function <span class="apidocSignatureSpan">ponte.</span>persistence
-            <span class="apidocSignatureSpan">(opts, done)</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.ponte.toString">module ponte.toString</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.ponte.toString.toString">
-            function <span class="apidocSignatureSpan">ponte.</span>toString
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
 </ol></div>
 
 <div class="apidocSectionDiv">
@@ -468,7 +411,22 @@
 
   return this(opts, done);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * and the Eclipse Distribution License is available at
+ *   http://www.eclipse.org/org/documents/edl-v10.php.
+ *
+ * Contributors:
+ *    Matteo Collina - initial API and implementation and/or initial documentation
+ *******************************************************************************/
+
+require(&#x22;../lib/ponte&#x22;).<span class="apidocCodeKeywordSpan">cli</span>(process.argv, function(err) {
+  if (err) {
+    console.log(err);
+    console.log(err.stack);
+    process.exit(1);
+  }
+});
+...</pre></li>
     </ul>
 
 
@@ -644,27 +602,6 @@
 
 
     <h2>
-        <a href="#apidoc.element.ponte.persistence" id="apidoc.element.ponte.persistence">
-        function <span class="apidocSignatureSpan">ponte.</span>persistence
-        <span class="apidocSignatureSpan">(opts, done)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">persistence = function (opts, done) {
-  var factory = persistences[opts.type];
-
-  if (opts.type === &#x22;memory&#x22;) {
-    done(null, factory(opts));
-  } else {
-    factory(opts, done);
-  }
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-    <h2>
         <a href="#apidoc.element.ponte.super_" id="apidoc.element.ponte.super_">
         function <span class="apidocSignatureSpan">ponte.</span>super_
         <span class="apidocSignatureSpan">()</span>
@@ -679,118 +616,7 @@
 
 
 
-    <h2>
-        <a href="#apidoc.element.ponte.toString" id="apidoc.element.ponte.toString">
-        function <span class="apidocSignatureSpan">ponte.</span>toString
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">toString = function () {
-    return text;
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
 
-
-
-
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.ponte.cli" id="apidoc.module.ponte.cli">module ponte.cli</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.ponte.cli.cli" id="apidoc.element.ponte.cli.cli">
-        function <span class="apidocSignatureSpan">ponte.</span>cli
-        <span class="apidocSignatureSpan">(args, done)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">cli = function (args, done) {
-
-  args = args || [];
-
-  var program = new commander.Command();
-  var server = null;
-  var runned = false;
-
-  program
-    .version(pkg.version)
-    .option(&#x22;-m, --mqtt-port &#x3c;n&#x3e;&#x22;, &#x22;the mqtt port to listen to&#x22;, parseInt)
-    .option(&#x22;-p, --http-port &#x3c;n&#x3e;&#x22;, &#x22;the http port to listen to&#x22;, parseInt)
-    .option(&#x22;-a, --coap-port &#x3c;n&#x3e;&#x22;, &#x22;the coap port to listen to&#x22;, parseInt)
-    .option(&#x22;--host &#x3c;host&#x3e;&#x22;, &#x22;the host to listen to&#x22;)
-    .option(&#x22;--coap-host &#x3c;host&#x3e;&#x22;, &#x22;the host to listen to for coap requests&#x22;)
-    .option(&#x22;--mqtt-host &#x3c;host&#x3e;&#x22;, &#x22;the host to listen to for mqtt requests&#x22;)
-    .option(&#x22;--http-host &#x3c;host&#x3e;&#x22;, &#x22;the host to listen to for http requests&#x22;)
-    .option(&#x22;-d, --db &#x3c;path&#x3e;&#x22;, &#x22;the path were to store the database&#x22;)
-    .option(&#x22;-c, --config &#x3c;c&#x3e;&#x22;, &#x22;the config file to use (override every other option)&#x22;)
-    .option(&#x22;-v, --verbose&#x22;, &#x22;set the bunyan log to INFO&#x22;)
-    .option(&#x22;--very-verbose&#x22;, &#x22;set the bunyan log to DEBUG&#x22;);
-
-  program.parse(args);
-
-  var opts = {
-    logger: {},
-    http: {},
-    mqtt: {},
-    coap: {},
-    persistence: {}
-  };
-
-  if (program.verbose) {
-    opts.logger.level = 30;
-  } else if (program.veryVerbose) {
-    opts.logger.level = 20;
-  }
-
-  if (program.httpPort) {
-    opts.http.port = program.httpPort;
-  }
-
-  if (program.mqttPort) {
-    opts.mqtt.port = program.mqttPort;
-  }
-
-  if (program.coapPort) {
-    opts.coap.port = program.coapPort;
-  }
-
-  if (program.host) {
-    opts.coap.host = program.host;
-    opts.mqtt.host = program.host;
-    opts.http.host = program.host;
-  }
-
-  if (program.coapHost) {
-    opts.coap.host = program.coapHost;
-  }
-
-  if (program.mqttHost) {
-    opts.mqtt.host = program.mqttHost;
-  }
-
-  if (program.httpHost) {
-    opts.http.host = program.httpHost;
-  }
-
-  if (program.db) {
-    opts.persistence.path = program.db;
-    opts.persistence.type = &#x22;level&#x22;;
-  }
-
-  if (program.config) {
-    opts = require(path.resolve(program.config));
-  }
-
-  return this(opts, done);
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
 
 
 </div>
@@ -1618,50 +1444,6 @@ setTimeout(function() {
 
 ## Configuration
 ...</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.ponte.persistence" id="apidoc.module.ponte.persistence">module ponte.persistence</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.ponte.persistence.persistence" id="apidoc.element.ponte.persistence.persistence">
-        function <span class="apidocSignatureSpan">ponte.</span>persistence
-        <span class="apidocSignatureSpan">(opts, done)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">persistence = function (opts, done) {
-  var factory = persistences[opts.type];
-
-  if (opts.type === &#x22;memory&#x22;) {
-    done(null, factory(opts));
-  } else {
-    factory(opts, done);
-  }
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.ponte.toString" id="apidoc.module.ponte.toString">module ponte.toString</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.ponte.toString.toString" id="apidoc.element.ponte.toString.toString">
-        function <span class="apidocSignatureSpan">ponte.</span>toString
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
